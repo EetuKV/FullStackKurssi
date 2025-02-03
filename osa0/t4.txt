@@ -1,0 +1,9 @@
+
+selain:  post /exampleapp/notes, host: studies.cs.helsinki.fi, note: "juupajuu"
+palvelin: 302, uudelleenohjaa selaimen tekemään  get-pyynnön
+selain: get     /exampleapp/notes, host: studies.cs.helsinki.fi 
+palvelin: 200, palauttaa HTML:n
+selain: lukee ja parsii HTML:ää. Kun vastaan tulee  CSS-linkitys, jolloin get /exampleapp/main.css, host: studies.cs.helsinki.fi  
+palvelin: 200
+selain: script-elementti, get /exampleapp/maij.js, host: studies.cs.helsinki.fi, javascript lähettää get /data.json, host:   studies.cs.helsinki.fi  
+palvelin: 200, palauttaa datan jonka selain renderöi
