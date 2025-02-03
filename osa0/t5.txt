@@ -1,0 +1,8 @@
+selain: get /spa, host: studies.cs.helsinki.fi 
+palvelin: 200, palauttaa html:n
+selain: get /main.css, host: studies.cs.helsinki.fi 
+palvelin: 200
+selain: get /spa.js, host: studies.cs.helsinki.fi 
+palvelin: 200
+selain javascriptillä: get  /data.json, host: studies.cs.helsinki.fi 
+palvelin: 200
