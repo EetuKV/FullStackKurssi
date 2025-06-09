@@ -101,13 +101,6 @@ const deleteContact = (id) => {
             setData(data.filter(item => item.id !== id));
         }
         
-        ).catch((err) => {
-            setError("Contact has been already removed");
-            setTimeout(() => {
-                setError(null);
-            },5000);
-            setData(data.filter(e => e.id !== id));
-        }
         );
         
 
@@ -128,7 +121,14 @@ phoneServ.update(id, edited).then((uc) => {
     setData(data.map(e => e.id !== id ? e : uc));
 }
 
-)
+).catch((err) => {
+    setError("Contact has been already removed");
+    setTimeout(() => {
+        setError(null);
+    },5000);
+    setData(data.filter(e => e.id !== id));
+}
+);
     }
 
 
